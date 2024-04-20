@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body{
+            background-color: rgb(254, 90, 238);
+            font: normal 20pt Arial;
+            color: white;
+            text-align: center;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            padding: 10px;
+            background: rgba(213, 99, 38, 0.386);
+            border-radius: 20px ;
+            border-style: solid;
+            
+        }
+        p {
+            text-align: justify;
+            margin: auto;
+            padding: 10px;
+            border-style: solid;
+            width: 500px;
+            background: rgba(88, 162, 232, 0.626);
+            border-radius: 10px;
+            font: normal 18pt Arial;
+            line-height: 5px;
+            text-indent: 30px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        div#pais {
+            color: black;
+            text-align: start;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>País</h1>
+    <p>Qual é o seu país?</p>
+    <input type="text" id="nomePais">
+    <input type="button" value="Verificar" onclick="verificarPais()">
+
+    <div id="pais">Nacionalidade: </div>
+
+    <script>
+        function verificarPais() {
+            var nomePais = document.getElementById('nomePais').value;
+            var paisElement = document.getElementById('pais');
+
+            if (nomePais === 'Brasil') {
+                paisElement.innerHTML = 'Nacionalidade: <strong>Brasileiro!</strong>';
+                console.log(`Vivendo em ${nomePais}`);
+            } else {
+                paisElement.innerHTML = ('Nacionalidade: Estrangeiro')
+                console.log('Você é Estrangeiro!');
+            }
+        }
+        
+    </script>
+</body>
+</html>
